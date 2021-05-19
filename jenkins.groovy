@@ -16,6 +16,14 @@ pipeline {
                     }
                 }
             }
-
+stage('Plan') {
+            steps {
+                sh 'pwd;cd new_terraform; terraform init -input=false'
+                
+		            }
         }
+
+       
+        }
+  
   }
