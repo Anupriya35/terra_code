@@ -20,9 +20,9 @@ parameters {
                     }
                 }
             }
-stage('Plan') {
+stage('terraform init') {
             steps {
-                sh 'pwd;cd terraform; terraform init -input=false'
+                sh 'pwd;cd ./terraform; terraform init -input=false'
                 
 		            }
         }
