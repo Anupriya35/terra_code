@@ -15,7 +15,8 @@ parameters {
                         dir("terraform_checkout")
                         {
                             git "https://github.com/Anupriya35/terra_code.git"
-
+ 			    sh 'pwd'
+				echo'thid is working dir'
                         }
                     }
                 }
