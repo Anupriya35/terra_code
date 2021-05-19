@@ -12,7 +12,7 @@ parameters {
         stage('checkout') {
             steps {
                  script{
-                        dir("terraform_checkout")
+                        dir("terraform")
                         {
                             git "https://github.com/Anupriya35/terra_code.git"
  			  
@@ -22,7 +22,7 @@ parameters {
             }
 stage('terraform init') {
             steps {
-                sh 'pwd;cd terraform_checkout; terraform init -input=false'
+                sh 'pwd;cd terraform; terraform init -input=false'
                 
 		            }
         }
