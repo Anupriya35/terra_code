@@ -15,15 +15,14 @@ parameters {
                         dir("terraform_checkout")
                         {
                             git "https://github.com/Anupriya35/terra_code.git"
- 			    sh 'pwd'
-				echo'thid is working dir'
+ 			  
                         }
                     }
                 }
             }
 stage('terraform init') {
             steps {
-                sh 'pwd;cd terraform; terraform init -input=false'
+                sh 'pwd;cd terraform_checkout; terraform init -input=false'
                 
 		            }
         }
