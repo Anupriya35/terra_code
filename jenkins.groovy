@@ -8,7 +8,7 @@ pipeline {
         stage('checkout') {
             steps {
                  script{
-                        dir("new_terraform")
+                        dir("terraform")
                         {
                             git "https://github.com/Anupriya35/terra_code.git"
 
@@ -18,7 +18,7 @@ pipeline {
             }
 stage('Plan') {
             steps {
-                sh 'pwd;cd new_terraform; terraform init -input=false'
+                sh 'pwd;cd terraform; terraform init -input=false'
                 
 		            }
         }
