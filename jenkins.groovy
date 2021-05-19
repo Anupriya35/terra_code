@@ -18,7 +18,7 @@ pipeline {
             }
 stage('Plan') {
             steps {
-                sh 'pwd;cd new_terraform; terraform init -input=false'
+                sh 'pwd;cd terraform; terraform init -input=false'
                 
 		            }
         }
